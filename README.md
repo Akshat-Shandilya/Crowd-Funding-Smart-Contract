@@ -1,1 +1,2 @@
 # Crowd-Funding-Smart-Contract
+The crowdfunding smart contract aims to facilitate transparent and community-driven fundraising initiatives. It allows organizers to propose initiatives for which they seek donations from contributors. People can have a look at the initiatives, donate to the contract account and vote for initiatives. A donation to needy will take place only if more than half of the contributors vote in its favour. 
