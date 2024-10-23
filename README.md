@@ -20,7 +20,7 @@
    - All transactions and votes are recorded on the blockchain, making them immutable and publicly accessible, providing full transparency.
    - The smart contract’s decentralized nature ensures that no single entity controls the funds, reducing the risk of fraud.
 
-5. ** Fund Release**:
+5. **Fund Release**:
    - Once a project receives enough votes in favor, the organizer has the permission to release the funds to the intended recipient .
    - If the voting threshold is not met, the funds remain locked in the contract, ensuring that the contributors’ money is only spent as per their collective decision.
 
