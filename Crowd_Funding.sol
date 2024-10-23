@@ -23,6 +23,7 @@ contract CrowdFunding {
     uint public number_of_initiatives ;
     uint public number_of_contributers ;
     uint public amount_raised;
+    uint public constant minimum_donation_in_usd = 5;
 
     address public organizer ;
 
@@ -40,12 +41,14 @@ contract CrowdFunding {
         new_initiative.donated = false ;
     }
 
-    uint public constant minimum_usd = 5;
+    function curentPriceOfEth () public view returns (uint256) {
+        return PriceConverter.getPrice() / (1e18) ;
+    }
 
     function MakeContribution() public payable {
         uint256 value_in_wei = msg.value;
         uint256 contribution_in_USD = (value_in_wei.ETHToUSD()) / 1e18;
-        require ( contribution_in_USD >= minimum_usd , "You need to spend more ETH!");
+        require ( contribution_in_USD >= minimum_donation_in_usd , "You need to spend more ETH!");
         if (Contributers[msg.sender] == 0) {
             Contributers[msg.sender] = msg.value ;
             number_of_contributers += 1 ;
